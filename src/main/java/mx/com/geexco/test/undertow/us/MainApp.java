@@ -17,9 +17,17 @@ public class MainApp {
 
     private static Logger log = LoggerFactory.getLogger("Main");
 
-    public static void main(String[] args) throws Exception {
-        String hostname = InetAddress.getLocalHost().getHostName();
+    public static void main(String[] args) {
+        log.info("INITIALIZING");
+        String hostname = "";
+        try {
+            hostname = InetAddress.getLocalHost().getHostName();
+        } catch (Exception ex) {
+            log.error("Error on getLocalhost", ex);
+            return;
+        }
         String port = System.getProperty("server.port");
+        log.info("System port: " + port);
         if (port == null) {
             port = "8080";
         }
