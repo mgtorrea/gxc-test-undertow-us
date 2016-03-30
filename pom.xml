@@ -47,13 +47,13 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
+<!--                            <addClasspath>true</addClasspath>-->
                             <!--                            <classpathPrefix>lib/</classpathPrefix>-->
                             <mainClass>mx.com.geexco.test.undertow.us.MainApp</mainClass>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
                         <manifestEntries>
-                            <Class-Path>.</Class-Path>
+<!--                            <Class-Path>.</Class-Path>-->
                             <Build-Time>${maven.build.timestamp}</Build-Time>
                             <Implementation-Build>${maven.build.timestamp}</Implementation-Build>
                             <Implementation-Version>${project.version}</Implementation-Version>
