@@ -38,4 +38,32 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+<!--                            <classpathPrefix>lib/</classpathPrefix>-->
+                            <mainClass>mx.com.geexco.test.undertow.us.MainApp</mainClass>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>.</Class-Path>
+                            <Build-Time>${maven.build.timestamp}</Build-Time>
+                            <Implementation-Build>${maven.build.timestamp}</Implementation-Build>
+                            <Implementation-Version>${project.version}</Implementation-Version>
+                        </manifestEntries>
+                    </archive>
+<!--                    <excludes>
+                        <exclude>log4j2.xml</exclude>
+                    </excludes>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
