@@ -47,8 +47,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-<!--                            <addClasspath>true</addClasspath>-->
-                            <!--                            <classpathPrefix>lib/</classpathPrefix>-->
+                            <addClasspath>true</addClasspath>
+                            <!--<classpathPrefix>lib/</classpathPrefix>-->
                             <mainClass>mx.com.geexco.test.undertow.us.MainApp</mainClass>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
