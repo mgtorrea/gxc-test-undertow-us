@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %c{1.} [%5p] - %m%n"/>
+            <!--<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+        </Console>
+<!--        <RollingRandomAccessFile name="raf" fileName="logs/app.log" immediateFlush="false" append="true" filePattern="logs/old/app.log"> 
+            <PatternLayout pattern="%d %c{1.} [%5p] - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingRandomAccessFile>-->
+    </Appenders>
+  
+    <Loggers>
+        <Logger name="org.springframework.jdbc" level="error" />
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
