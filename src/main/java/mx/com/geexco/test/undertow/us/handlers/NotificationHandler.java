@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import mx.com.geexco.test.undertow.us.dao.RegistrationSource;
 import mx.com.geexco.test.undertow.us.dto.GCMMessage;
-import mx.com.geexco.test.undertow.us.dto.GCMMessagePayload;
 import mx.com.geexco.test.undertow.us.dto.NotificationDTO;
 import mx.com.geexco.test.undertow.us.dto.ResponseDTO;
 import org.apache.http.Header;
@@ -23,7 +22,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public class NotificationHandler extends AbstractJSONProcessorHandler {
 

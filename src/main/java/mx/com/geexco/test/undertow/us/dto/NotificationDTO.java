@@ -2,7 +2,7 @@ package mx.com.geexco.test.undertow.us.dto;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public class NotificationDTO {
 

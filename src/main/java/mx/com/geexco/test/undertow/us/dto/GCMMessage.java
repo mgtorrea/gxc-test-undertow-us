@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public class GCMMessage {
 

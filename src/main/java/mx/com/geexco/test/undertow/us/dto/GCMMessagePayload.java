@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public class GCMMessagePayload {
 

@@ -6,7 +6,7 @@ import mx.com.geexco.test.undertow.us.dto.RegistrationDTO;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public class RegistrationSource {
 

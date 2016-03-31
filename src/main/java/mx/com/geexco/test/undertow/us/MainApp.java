@@ -7,7 +7,6 @@ import java.net.InetAddress;
 import mx.com.geexco.test.undertow.us.dao.RegistrationSource;
 import mx.com.geexco.test.undertow.us.handlers.NotificationHandler;
 import mx.com.geexco.test.undertow.us.handlers.RegistrationHandler;
-import org.apache.commons.codec.binary.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

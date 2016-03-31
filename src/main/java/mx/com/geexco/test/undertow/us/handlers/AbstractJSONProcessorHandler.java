@@ -3,7 +3,6 @@ package mx.com.geexco.test.undertow.us.handlers;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.Headers;
-import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -11,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public abstract class AbstractJSONProcessorHandler implements HttpHandler {
 
