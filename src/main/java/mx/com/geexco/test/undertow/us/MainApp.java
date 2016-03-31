@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author J12411
+ * @author gxc-mg
  */
 public class MainApp {
     
