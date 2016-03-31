@@ -28,9 +28,19 @@
             <version>2.3</version>
         </dependency>
         <dependency>
-            <groupId>com.google.gcm</groupId>
-            <artifactId>gcm-server</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
         </dependency>
     </dependencies>
     <properties>
@@ -53,13 +63,13 @@
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
                         <manifestEntries>
-<!--                            <Class-Path>.</Class-Path>-->
+                            <!--<Class-Path>.</Class-Path>-->
                             <Build-Time>${maven.build.timestamp}</Build-Time>
                             <Implementation-Build>${maven.build.timestamp}</Implementation-Build>
                             <Implementation-Version>${project.version}</Implementation-Version>
                         </manifestEntries>
                     </archive>
-                    <!--                    <excludes>
+                    <!--<excludes>
                         <exclude>log4j2.xml</exclude>
                     </excludes>-->
                 </configuration>
