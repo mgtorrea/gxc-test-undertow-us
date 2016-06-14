@@ -16,10 +16,8 @@ public class RegistrationSource {
         map.put(reg.getId(), reg.getDevice());
     }
 
-    public void list() {
-        for (String key : map.keySet()) {
-            System.out.println(key + "=>" + map.get(key));
-        }
+    public Map getMap(){
+        return this.map;
     }
 
     public String getDevice(String id) {
