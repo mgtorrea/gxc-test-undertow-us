@@ -5,6 +5,7 @@ import io.undertow.Undertow;
 import io.undertow.server.handlers.form.EagerFormParsingHandler;
 import java.net.InetAddress;
 import mx.com.geexco.test.undertow.us.dao.RegistrationSource;
+import mx.com.geexco.test.undertow.us.handlers.ListaRegistradosHandler;
 import mx.com.geexco.test.undertow.us.handlers.NotificationHandler;
 import mx.com.geexco.test.undertow.us.handlers.RegistrationHandler;
 import org.slf4j.Logger;
