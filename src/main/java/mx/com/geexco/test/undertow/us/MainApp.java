@@ -45,6 +45,7 @@ public class MainApp {
                 .setHandler(Handlers.path()
                         .addExactPath("/api/register", new EagerFormParsingHandler().setNext(new RegistrationHandler(reg)))
                         .addExactPath("/api/notify", new EagerFormParsingHandler().setNext(new NotificationHandler(reg, serviceKey)))
+                        .addExactPath("/api/list", new EagerFormParsingHandler().setNext(new ListaRegistradosHandler(reg)))
                 ).build();
         log.info("Server started on " + hostname + ":" + puerto);
         server.start();
