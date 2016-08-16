@@ -18,7 +18,7 @@ public class GCMMessage {
     private boolean content_available;
 
     public GCMMessage() {
-        content_available=true;
+        this.content_available=true;
     }
 
     public void addData(String key, String value) {
@@ -27,6 +27,7 @@ public class GCMMessage {
 
     public GCMMessage(String[] receivers) {
         this.receivers = receivers;
+        this.content_available=true;
     }
 
     public String[] getReceivers() {
