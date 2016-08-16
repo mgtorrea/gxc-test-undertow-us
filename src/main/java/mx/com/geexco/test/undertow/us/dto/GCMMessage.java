@@ -14,8 +14,11 @@ public class GCMMessage {
     private String[] receivers;
     @SerializedName(value = "data")
     private Map<String, String> payload = new HashMap<>();
+    @SerializedName(value = "content_available")
+    private boolean content_available;
 
     public GCMMessage() {
+        content_available=true;
     }
 
     public void addData(String key, String value) {
@@ -42,4 +45,12 @@ public class GCMMessage {
         this.payload = payload;
     }
 
+    public void setContent_available(boolean content_available) {
+        this.content_available = content_available;
+    }
+
+    public boolean isContent_available() {
+        return content_available;
+    }
+    
 }
