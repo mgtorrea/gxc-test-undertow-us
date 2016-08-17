@@ -40,7 +40,7 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
 
     private int notifica(String registrationId, String title, String msgContent, String info) {
         CloseableHttpClient client = cb.build();
-        HttpPost post = new HttpPost("https://android.googleapis.com/gcm/send");
+        HttpPost post = new HttpPost("https://fcm.googleapis.com/fcm/send");
         GCMMessage msg = new GCMMessage(new String[]{registrationId});
         msg.addData("title", title);
         msg.addData("message", msgContent);
