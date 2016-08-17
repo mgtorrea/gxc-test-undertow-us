@@ -46,6 +46,7 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
         msg.addData("message", msgContent);
         msg.addData("info", info);
         String data = gb.create().toJson(msg);
+        log.info("Mensaje enviado:"+data);
         post.setEntity(new StringEntity(data, ContentType.APPLICATION_JSON));
         try {
             CloseableHttpResponse response = client.execute(post);
