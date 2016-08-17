@@ -43,7 +43,8 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
         HttpPost post = new HttpPost("https://fcm.googleapis.com/fcm/send");
         GCMMessage msg = new GCMMessage(new String[]{registrationId});
         msg.addNotificationData("title", title);
-        msg.addNotificationData("message", msgContent);
+        msg.addNotificationData("body", msgContent);
+        msg.addNotificationData("sound", "default");
         msg.addData("content-available", "1");
         msg.addData("info", info);
         String data = gb.create().toJson(msg);
