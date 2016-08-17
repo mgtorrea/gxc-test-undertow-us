@@ -44,6 +44,7 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
         GCMMessage msg = new GCMMessage(new String[]{registrationId});
         //msg.addData("title", title);
         //msg.addData("message", msgContent);
+        msg.addData("content-available", 1);
         msg.addData("info", info);
         String data = gb.create().toJson(msg);
         log.info("Mensaje enviado:"+data);
