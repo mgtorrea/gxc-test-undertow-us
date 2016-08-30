@@ -30,7 +30,7 @@ public class RegistrationSource {
                 devices.add(dev);
             }
         }
-        return devices.toArray();
+        return (String[])devices.toArray();
     }
 
 }
