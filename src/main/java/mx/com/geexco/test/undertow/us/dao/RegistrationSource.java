@@ -36,7 +36,7 @@ public class RegistrationSource {
                 devices.add(dev);
             }
         }
-        return (String[])devices.toArray();
+        return devices.toArray(new String[devices.size()]);
     }
 
 }
