@@ -23,7 +23,7 @@ public class RegistrationSource {
     }
 
     public String []getDeviceIds(String[] ids) {
-        List devices=new ArrayList<String>();
+        List<String> devices=new ArrayList<String>();
         for(String id:ids){
             String dev=map.get(id);
             if(dev!=null){
