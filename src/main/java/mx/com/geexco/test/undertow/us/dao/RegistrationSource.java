@@ -20,8 +20,15 @@ public class RegistrationSource {
         return this.map;
     }
 
-    public String getDevice(String id) {
-        return map.get(id);
+    public String []getDeviceIds(String[] ids) {
+        List devices=new ArrayList<String>();
+        for(String id:ids){
+            String dev=map.get(id);
+            if(dev!=null){
+                devices.add(dev);
+            }
+        }
+        return devices.toArray();
     }
 
 }
