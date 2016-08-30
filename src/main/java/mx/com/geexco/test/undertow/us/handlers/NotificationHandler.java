@@ -62,6 +62,7 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
     @Override
     public String handleJSONMessage(String msg) {
         Gson gson = gb.create();
+        log.info(">>"+msg);
         if (msg.isEmpty()) {
             return gson.toJson(new ResponseDTO(-1));
         }
