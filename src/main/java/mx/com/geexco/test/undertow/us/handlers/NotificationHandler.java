@@ -38,10 +38,10 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
         cb = HttpClientBuilder.create().setDefaultHeaders(Arrays.asList(header));
     }
 
-    private int notifica(String registrationId, String title, String msgContent, String info) {
+    private int notifica(String[] registrationIds, String title, String msgContent, String info) {
         CloseableHttpClient client = cb.build();
         HttpPost post = new HttpPost("https://fcm.googleapis.com/fcm/send");
-        GCMMessage msg = new GCMMessage(new String[]{registrationId});
+        GCMMessage msg = new GCMMessage(registrationIds);
         msg.addData("title", title);
         msg.addData("body", msgContent);
         //msg.addNotificationData("sound", "default");
@@ -72,7 +72,7 @@ public class NotificationHandler extends AbstractJSONProcessorHandler {
             log.info("Error getting DTO from '" + msg + "'");
             return gson.toJson(new ResponseDTO(-2));
         }
-        String id = reg.getDevice(dto.getId());
+        String[] id = reg.getDeviceIds(dto.getId().split("<"));
         if (id == null) {
             return gson.toJson(new ResponseDTO(-3));
         }
